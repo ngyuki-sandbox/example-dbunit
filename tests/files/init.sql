@@ -1,0 +1,18 @@
+CREATE TABLE t_group
+(
+  group_id INTEGER NOT NULL PRIMARY KEY,
+  group_name  VARCHAR (255)
+)
+;
+
+CREATE TABLE t_user
+(
+  user_id INTEGER NOT NULL PRIMARY KEY,
+  group_id INTEGER NOT NULL,
+  user_name VARCHAR (255)
+)
+;
+
+ALTER TABLE t_user ADD CONSTRAINT fk_user_01 FOREIGN KEY (group_id) REFERENCES t_group (group_id)
+  ON UPDATE CASCADE ON DELETE CASCADE
+;
