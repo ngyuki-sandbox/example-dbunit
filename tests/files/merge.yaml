@@ -1,0 +1,8 @@
+t_group:
+  - group_id: 99
+    group_name: nobody
+
+t_user:
+  - user_id: 99
+    group_id: 99
+    user_name: nobody

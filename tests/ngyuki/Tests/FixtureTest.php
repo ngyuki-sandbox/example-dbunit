@@ -11,7 +11,7 @@ class FixtureTest extends \PHPUnit_Framework_TestCase
         $dataset = new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(PHPUNIT_FILES . '/sample.yaml');
 
         $op = new \PHPUnit_Extensions_Database_Operation_Composite(array(
-            new \PHPUnit_Extensions_Database_Operation_Delete(),
+            new \PHPUnit_Extensions_Database_Operation_DeleteAll(),
             new \PHPUnit_Extensions_Database_Operation_Insert(),
         ));
 
